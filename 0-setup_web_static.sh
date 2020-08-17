@@ -1,13 +1,9 @@
 #!/usr/bin/env bash
 # sets up your web servers for the deployment of web_static
-
-if ! test -f nginx; then
-	sudo apt -y update
-	sudo apt -y upgrade
-	sudo apt -y install nginx
-fi
-
-mkdir -p /data/web_static/releases/
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt -y install nginx
+mkdir -p /data/web_static/releases/test
 mkdir -p /data/web_static/shared/
 touch /data/web_static/releases/test/index.html
 content="Holberton school"
