@@ -10,12 +10,12 @@ fi
 mkdir -p /data/web_static/releases/
 mkdir -p /data/web_static/shared/
 touch /data/web_static/releases/test/index.html
-content = "Holberton school"
-echo $content > /data/web_static/releases/test/index.html
+content="Holberton school"
+echo "$content" > /data/web_static/releases/test/index.html
 if test -L /data/web_static/current; then
 	rm -rf /data/web_static/current
 	ln -sf /data/web_static/releases/test/ /data/web_static/current
-else;
+else
 	ln -sf /data/web_static/releases/test/ /data/web_static/current
 fi;
 sudo chown -hR ubuntu:/data
