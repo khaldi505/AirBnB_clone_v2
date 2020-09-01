@@ -31,7 +31,7 @@ def c_text(text):
 
 @app.route('/python/', defaults={'text':'is cool'})
 @app.route('/python/<text>', strict_slashes=False)
-def python_text(text="is cool"):
+def python_text(text):
     """
     returns python followed by a text
     if the input does not exist the default text is "is cool"
