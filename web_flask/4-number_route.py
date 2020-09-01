@@ -42,7 +42,7 @@ def python_text(text):
     return 'Python %s' % text
 
 
-@app.route('/by_user/<int:n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def int_in(n):
     """ this will only returns an unsigned int """
     return '%i is a number' % n
