@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# a script that starts a flask web application
+"""
+a script that starts a flask web application
+"""
 
 
 from flask import Flask
@@ -8,18 +10,18 @@ from flask import Flask
 app = Flask(__name__)
 
 
-app.url_map.strict_slashes = False
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def hello_hbnb():
-	""" returns Hello hbnb!"""
+    """ returns Hello hbnb!"""
+    return "Hello HBNB!"
 
-	return "Hello HBNB!"
 
-@app.route('/hbnb')
+@app.route('/hbnb', strict_slashes=False)
 def hbnb():
-	""" returns Hello hbnb!"""
+    """ returns Hello hbnb!"""
 
-	return "HBNB"
+    return "HBNB"
+
 
 if __name__ == '__main__':
-   app.run()
+    app.run()
